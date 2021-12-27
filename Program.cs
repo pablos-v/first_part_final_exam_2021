@@ -8,11 +8,14 @@ for (int i = 0; i < startArray.Length; i++)
         startArray[count++] = startArray[i];
     }
 }
-int[] evenArray = new int[count];
+// int[] evenArray = new int[count];
 
-for (int i = 0; i < count; i++)
-{
-    evenArray[i] = startArray[i];
-}
+// for (int i = 0; i < count; i++)
+// {
+//     evenArray[i] = startArray[i];
+// }
 
-Console.Write(string.Join(' ', evenArray));
+// Console.Write(string.Join(' ', evenArray));
+
+Array.Resize(ref startArray, count);
+Console.Write(string.Join(' ', startArray));
